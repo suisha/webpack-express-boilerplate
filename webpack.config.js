@@ -5,7 +5,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   entry: [
     'webpack-hot-middleware/client?reload=true',
     path.join(__dirname, 'app/main.js')
@@ -40,8 +40,8 @@ module.exports = {
       test: /\.json?$/,
       loader: 'json'
     }, {
-      test: /\.css$/,
-      loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+      test: /\.scss$/,
+      loader: 'style!css!sass!'
     }]
   }
 };
