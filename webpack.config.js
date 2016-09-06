@@ -41,7 +41,7 @@ module.exports = {
       loader: 'json'
     }, {
       test: /\.scss$/,
-      loader: 'style!css!sass!'
+      loader: 'style!css!postcss!sass!'
     }]
   }
 };
